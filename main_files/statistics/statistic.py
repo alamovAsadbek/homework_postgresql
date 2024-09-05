@@ -1,3 +1,4 @@
+from components.pagination.pagination import Pagination
 from main_files.database.db_setting import execute_query
 from main_files.decorator.decorator_func import log_decorator
 from main_files.manage.manage import run_query
@@ -17,5 +18,7 @@ class Statistic:
         GROUP BY c.name;
         '''
         result = execute_query(query, fetch='all')
+        pagination = Pagination(table_name='users', table_keys=['name'], display_keys=['Name'])
+        pagination.page_tab()
         print(result)
         return result
