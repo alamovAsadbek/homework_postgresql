@@ -25,7 +25,7 @@ class Pagination:
         return result_data
 
     @log_decorator
-    def page_tab(self, page_number: int = 1, page_size=2):
+    def page_tab(self, page_number: int = 1, page_size=5):
         datas = self.data
         if datas is None:
             datas = self.__read_table()

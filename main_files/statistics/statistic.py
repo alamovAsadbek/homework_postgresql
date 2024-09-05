@@ -20,5 +20,4 @@ class Statistic:
         result = execute_query(query, fetch='all')
         pagination = Pagination(table_name='users', table_keys=['name'], display_keys=['Name'], data=result)
         pagination.page_tab()
-        print(result)
         return result
