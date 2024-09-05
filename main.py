@@ -12,3 +12,7 @@ def main_func():
     except Exception as e:
         print(f'Error: {e}')
         main_func()
+
+
+if __name__ == '__main__':
+    main_func()
