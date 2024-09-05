@@ -48,4 +48,18 @@ class Manage:
 
     @log_decorator
     def insert_department_table(self):
-        pass
+        query = '''
+        INSERT INTO Department (name, company_id) VALUES
+        ('Human Resources', 1),
+        ('Finance', 1),
+        ('Engineering', 2),
+        ('Marketing', 2),
+        ('Sales', 3),
+        ('Customer Support', 3),
+        ('Research and Development', 4),
+        ('IT', 4),
+        ('Legal', 5),
+        ('Logistics', 5)
+        '''
+        execute_query(query)
+        return True
