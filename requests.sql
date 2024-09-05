@@ -43,3 +43,13 @@ VALUES ('Human Resources', 1),
        ('IT', 4),
        ('Legal', 5),
        ('Logistics', 5);
+
+
+-- Employee table yasab oldim
+CREATE TABLE IF NOT EXISTS employee
+(
+    ID            BIGSERIAL PRIMARY KEY,
+    FULL_NAME     VARCHAR(255) NOT NULL,
+    DEPARTMENT_ID BIGINT REFERENCES department (ID),
+    CREATED_AT    TIMESTAMP    NULL DEFAULT CURRENT_TIMESTAMP
+)
