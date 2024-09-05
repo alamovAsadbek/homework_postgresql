@@ -70,4 +70,15 @@ class Statistic:
 
     @log_decorator
     def employee_information(self):
-        pass
+        query = '''
+        SELECT c.name, d.name, e.full_name
+        FROM employee e
+        INNER JOIN department d on e.DEPARTMENT_ID = d.ID
+        INNER JOIN company c on c.ID = d.COMPANY_ID;
+        '''
+        result_exc = execute_query(query, fetch='all')
+        pagination = Pagination(table_name='users', table_keys=[0, 1, 2],
+                                display_keys=['Company name', 'Department name', 'Employees'],
+                                data=result_exc)
+        pagination.page_tab()
+        return True
