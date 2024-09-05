@@ -103,3 +103,6 @@ class Manage:
         return True
 
 
+@log_decorator
+def run_query():
+    pass
