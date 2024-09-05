@@ -30,5 +30,9 @@ class Manage:
         return True
 
     @log_decorator
+    def create_department_table(self):
+        pass
+
+    @log_decorator
     def insert_company_table(self):
         pass
