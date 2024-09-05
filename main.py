@@ -22,6 +22,11 @@ def main_func():
             statistic.number_of_employees_in_departments()
         elif user_input == 4:
             statistic.departments_without_staff()
+        elif user_input == 5:
+            statistic.employee_information()
+        else:
+            print('Invalid input')
+        main_func()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
