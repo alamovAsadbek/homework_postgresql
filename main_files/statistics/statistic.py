@@ -47,7 +47,7 @@ class Statistic:
         group by c.name, d.name ORDER BY count(*) desc ;
         '''
         result_exc = execute_query(query, fetch='all')
-        pagination = Pagination(table_name='users', table_keys=[0, 1],
+        pagination = Pagination(table_name='users', table_keys=[0, 1, 2],
                                 display_keys=['Company name', 'Department name', 'Employees'], data=result_exc)
         pagination.page_tab()
         return True
