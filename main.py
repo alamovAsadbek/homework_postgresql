@@ -7,12 +7,15 @@ def main_func():
     statistic = Statistic()
     text = '''
 1. Number of employees
+2. Number of departments
     '''
     print(text)
     try:
         user_input = int(input('Enter a number: '))
         if user_input == 1:
             statistic.number_of_employees()
+        elif user_input == 2:
+            statistic.number_of_departments()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
