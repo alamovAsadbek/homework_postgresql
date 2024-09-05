@@ -10,7 +10,9 @@ def main_func():
     '''
     print(text)
     try:
-        statistic.number_of_employees()
+        user_input = int(input('Enter a number: '))
+        if user_input == 1:
+            statistic.number_of_employees()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
