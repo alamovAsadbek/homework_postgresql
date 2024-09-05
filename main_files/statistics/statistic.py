@@ -13,7 +13,7 @@ class Statistic:
         SELECT c.name as NAME, COUNT(c.ID) as All_EMPLOYEES
         FROM company c
         LEFT JOIN department d ON d.COMPANY_ID = c.ID
-        RIGHT JOIN employee e ON e.DEPARTMENT_ID = d.id
+        LEFT JOIN employee e ON e.DEPARTMENT_ID = d.id
         GROUP BY c.name;
         '''
         result = execute_query(query, fetch='all')
