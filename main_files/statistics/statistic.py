@@ -16,6 +16,6 @@ class Statistic:
         RIGHT JOIN employee e ON e.DEPARTMENT_ID = d.id
         GROUP BY c.name;
         '''
-        result = execute_query(query)
+        result = execute_query(query, fetch='all')
         print(result)
         return result
