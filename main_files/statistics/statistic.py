@@ -51,3 +51,19 @@ class Statistic:
                                 display_keys=['Company name', 'Department name', 'Employees'], data=result_exc)
         pagination.page_tab()
         return True
+
+    @log_decorator
+    def departments_without_staff(self):
+        query = '''
+        SELECT c.name, d.name
+        FROM department d
+                 LEFT JOIN employee e on e.DEPARTMENT_ID = d.ID
+                 LEFT JOIN company c on d.company_id = c.ID
+        WHERE e.ID is NULL
+        group by c.name, d.name;
+        '''
+        result_exc = execute_query(query, fetch='all')
+        pagination = Pagination(table_name='users', table_keys=[0, 1], display_keys=['Company name', 'Department name'],
+                                data=result_exc)
+        pagination.page_tab()
+        return True
