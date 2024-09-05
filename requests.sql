@@ -29,5 +29,17 @@ CREATE TABLE IF NOT EXISTS department
     NAME       VARCHAR(255) NOT NULL,
     COMPANY_ID BIGINT       NOT NULL REFERENCES company (ID),
     CREATED_AT TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
-)
+);
 
+-- Department tableni malumot bilan to'ldirib oldim
+INSERT INTO Department (name, company_id)
+VALUES ('Human Resources', 1),
+       ('Finance', 1),
+       ('Engineering', 2),
+       ('Marketing', 2),
+       ('Sales', 3),
+       ('Customer Support', 3),
+       ('Research and Development', 4),
+       ('IT', 4),
+       ('Legal', 5),
+       ('Logistics', 5);
