@@ -10,10 +10,10 @@ class Statistic:
     @log_decorator
     def number_of_employees(self):
         query = '''
-        SELECT c.name, COUNT(e.ID)
-        FROM COMPANY AS c
-        LEFT JOIN DEPARTMENT AS d ON d.COMPANY_ID = c.ID
-        LEFT JOIN EMPLOYEE AS e ON e.DEPARTMENT_ID = d.id
+        SELECT c.name as NAME, COUNT(e.ID)
+        FROM COMPANY c
+        LEFT JOIN DEPARTMENT d ON d.COMPANY_ID = c.ID
+        LEFT JOIN EMPLOYEE e ON e.DEPARTMENT_ID = d.id
         GROUP BY c.name;
         '''
         result = execute_query(query)

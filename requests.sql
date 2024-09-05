@@ -73,8 +73,8 @@ VALUES ('Alice Johnson', 1),
        ('Olivia White', 1);
 
 -- Bunda man har bitta kompaniyda nechta xodim borligini aniqladim
-SELECT c.name, COUNT(e.ID)
-FROM COMPANY AS c
-         LEFT JOIN DEPARTMENT AS d ON d.COMPANY_ID = c.ID
-         LEFT JOIN EMPLOYEE AS e ON e.DEPARTMENT_ID = d.id
+SELECT c.name as NAME, COUNT(e.ID)
+FROM company c
+         LEFT JOIN department d ON d.COMPANY_ID = c.ID
+         LEFT JOIN employee e ON e.DEPARTMENT_ID = d.id
 GROUP BY c.name;
