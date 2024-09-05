@@ -82,7 +82,7 @@ class Manage:
     @log_decorator
     def insert_employee_table(self):
         query = '''
-        INSERT INTO Employees (full_name, department_id) VALUES
+        INSERT INTO Employee (full_name, department_id) VALUES
         ('Alice Johnson', 1),
         ('Bob Smith', 2),
         ('Charlie Brown', 3),

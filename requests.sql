@@ -52,4 +52,22 @@ CREATE TABLE IF NOT EXISTS employee
     FULL_NAME     VARCHAR(255) NOT NULL,
     DEPARTMENT_ID BIGINT REFERENCES department (ID),
     CREATED_AT    TIMESTAMP    NULL DEFAULT CURRENT_TIMESTAMP
-)
+);
+
+
+INSERT INTO Employee (full_name, department_id)
+VALUES ('Alice Johnson', 1),
+       ('Bob Smith', 2),
+       ('Charlie Brown', 3),
+       ('David Wilson', NULL),
+       ('Emily Davis', 4),
+       ('Frank Miller', NULL),
+       ('Grace Lee', 5),
+       ('Henry Moore', 1),
+       ('Ivy Clark', 2),
+       ('Jack Taylor', NULL),
+       ('Kathy Anderson', 3),
+       ('Louis Thomas', NULL),
+       ('Mia Harris', 4),
+       ('Noah Martin', 5),
+       ('Olivia White', 1);
