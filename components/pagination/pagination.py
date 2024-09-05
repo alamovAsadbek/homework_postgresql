@@ -20,7 +20,7 @@ class Pagination:
         return execute_query(query, fetch='all')
 
     @log_decorator
-    def get_page_data(self, page_number=1, page_size=2, table_data=None):
+    def get_page_data(self, page_number=1, page_size=5, table_data=None):
         result_data = table_data[(page_number - 1) * page_size: (page_number - 1) * page_size + page_size]
         return result_data
 
