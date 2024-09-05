@@ -36,7 +36,7 @@ class Manage:
 
     @log_decorator
     def create_department_table(self):
-        query='''
+        query = '''
         CREATE TABLE IF NOT EXISTS department (
         ID BIGSERIAL PRIMARY KEY,
         NAME VARCHAR(255) NOT NULL,
@@ -44,3 +44,4 @@ class Manage:
         CREATED_AT TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         )
         '''
+        execute_query(query)
