@@ -81,4 +81,23 @@ class Manage:
 
     @log_decorator
     def insert_employee_table(self):
-        pass
+        query = '''
+        INSERT INTO Employees (full_name, department_id) VALUES
+        ('Alice Johnson', 1),
+        ('Bob Smith', 2),
+        ('Charlie Brown', 3),
+        ('David Wilson', NULL), 
+        ('Emily Davis', 4),
+        ('Frank Miller', NULL),  
+        ('Grace Lee', 5),
+        ('Henry Moore', 1),
+        ('Ivy Clark', 2),
+        ('Jack Taylor', NULL),  
+        ('Kathy Anderson', 3),
+        ('Louis Thomas', NULL),  
+        ('Mia Harris', 4),
+        ('Noah Martin', 5),
+        ('Olivia White', 1);
+        '''
+        execute_query(query)
+        return True
