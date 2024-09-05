@@ -84,3 +84,10 @@ SELECT c.name as NAME, COUNT(c.ID) as All_DEPARTMENTS
 FROM company c
          LEFT JOIN department d ON d.COMPANY_ID = c.ID
 GROUP BY c.name;
+
+-- Bu query orqali har bir departmentda nechta xodim borligini aniqlaydi
+SELECT c.name, d.name, COUNT(e.id)
+FROM department d
+    LEFT JOIN employee e on d.ID = e.DEPARTMENT_ID
+    LEFT JOIN company c on d.company_id=c.ID
+group by c.name, d.name ORDER BY count(*) desc ;

@@ -36,3 +36,18 @@ class Statistic:
                                 data=result_exc)
         pagination.page_tab()
         return True
+
+    @log_decorator
+    def number_of_employees_in_departments(self):
+        query = '''
+        SELECT c.name, d.name, COUNT(e.id)
+        FROM department d
+            LEFT JOIN employee e on d.ID = e.DEPARTMENT_ID
+            LEFT JOIN company c on d.company_id=c.ID
+        group by c.name, d.name ORDER BY count(*) desc ;
+        '''
+        result_exc = execute_query(query, fetch='all')
+        pagination = Pagination(table_name='users', table_keys=[0, 1],
+                                display_keys=['Company name', 'Department name', 'Employees'], data=result_exc)
+        pagination.page_tab()
+        return True
