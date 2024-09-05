@@ -9,6 +9,7 @@ def main_func():
 1. Number of employees
 2. Number of departments
 3. Number of employees in departments
+4. Departments Without staff
     '''
     print(text)
     try:
@@ -19,6 +20,8 @@ def main_func():
             statistic.number_of_departments()
         elif user_input == 3:
             statistic.number_of_employees_in_departments()
+        elif user_input == 4:
+            statistic.departments_without_staff()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
