@@ -18,7 +18,7 @@ def main_func():
         elif user_input == 2:
             statistic.number_of_departments()
         elif user_input == 3:
-            pass
+            statistic.number_of_employees_in_departments()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
