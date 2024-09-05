@@ -78,3 +78,9 @@ FROM company c
          LEFT JOIN department d ON d.COMPANY_ID = c.ID
          LEFT JOIN employee e ON e.DEPARTMENT_ID = d.id
 GROUP BY c.name;
+
+-- Bu query orqali har bir kompaniyani nechta department i borligini aniqlasa buladi
+SELECT c.name as NAME, COUNT(c.ID) as All_DEPARTMENTS
+FROM company c
+         LEFT JOIN department d ON d.COMPANY_ID = c.ID
+GROUP BY c.name;
