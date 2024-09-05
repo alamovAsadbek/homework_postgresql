@@ -65,3 +65,7 @@ class Manage:
         '''
         execute_query(query)
         return True
+
+    @log_decorator
+    def create_employee_table(self):
+        pass
