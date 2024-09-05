@@ -10,6 +10,7 @@ def main_func():
 2. Number of departments
 3. Number of employees in departments
 4. Departments Without staff
+5. Employees information
     '''
     print(text)
     try:
