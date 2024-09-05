@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS employee
     CREATED_AT    TIMESTAMP    NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Employee tableni malumot bilan to'ldirib oldim
 INSERT INTO Employee (full_name, department_id)
 VALUES ('Alice Johnson', 1),
        ('Bob Smith', 2),
