@@ -13,20 +13,7 @@ class Manage:
         )
         '''
         execute_query(query)
-        query = '''
-        INSERT INTO Company (name) VALUES
-        ('Tech Innovators Inc.'),
-        ('Global Financial Services Ltd.'),
-        ('Wellness Solutions LLC'),
-        ('SuperMart'),
-        ('EduTech Systems'),
-        ('Fast Transport Co.'),
-        ('Prime Properties'),
-        ('Green Energy Solutions'),
-        ('Precision Manufacturing Corp.'),
-        ('Creative Media Group');
-        '''
-        execute_query(query)
+
         return True
 
     @log_decorator
@@ -35,4 +22,18 @@ class Manage:
 
     @log_decorator
     def insert_company_table(self):
-        pass
+        query = '''
+                INSERT INTO Company (name) VALUES
+                ('Tech Innovators Inc.'),
+                ('Global Financial Services Ltd.'),
+                ('Wellness Solutions LLC'),
+                ('SuperMart'),
+                ('EduTech Systems'),
+                ('Fast Transport Co.'),
+                ('Prime Properties'),
+                ('Green Energy Solutions'),
+                ('Precision Manufacturing Corp.'),
+                ('Creative Media Group');
+                '''
+        execute_query(query)
+        return True
