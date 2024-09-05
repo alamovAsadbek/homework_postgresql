@@ -45,6 +45,8 @@ class Manage:
         )
         '''
         execute_query(query)
+        self.insert_department_table()
+        return True
 
     @log_decorator
     def insert_department_table(self):
