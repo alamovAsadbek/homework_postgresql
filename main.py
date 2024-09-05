@@ -8,6 +8,7 @@ def main_func():
     text = '''
 1. Number of employees
 2. Number of departments
+3. Number of employees in departments
     '''
     print(text)
     try:
