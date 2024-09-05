@@ -1,5 +1,5 @@
-from main_files.decorator.decorator_func import log_decorator
 from main_files.database.db_setting import execute_query
+from main_files.decorator.decorator_func import log_decorator
 
 
 class Manage:
@@ -14,3 +14,7 @@ class Manage:
         '''
         execute_query(query)
         return True
+
+    @log_decorator
+    def insert_company_table(self):
+        pass
