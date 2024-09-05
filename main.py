@@ -1,14 +1,16 @@
 from main_files.decorator.decorator_func import log_decorator
+from main_files.statistics.statistic import Statistic
 
 
 @log_decorator
 def main_func():
+    statistic = Statistic()
     text = '''
 1. Number of employees
     '''
     print(text)
     try:
-        pass
+        statistic.number_of_employees()
     except Exception as e:
         print(f'Error: {e}')
         main_func()
