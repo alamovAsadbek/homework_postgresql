@@ -1,1 +1,2 @@
-create database statistics_database;
+CREATE DATABASE statistics_database;
+
