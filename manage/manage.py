@@ -13,7 +13,7 @@ class Manage:
         )
         '''
         execute_query(query)
-
+        self.insert_company_table()
         return True
 
     @log_decorator
