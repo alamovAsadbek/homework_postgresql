@@ -37,7 +37,7 @@ class Pagination:
             for data in result_data:
                 print("\n")
                 for display_key, table_key in zip(self.display_keys, self.table_keys):
-                    print(f"{display_key}: {data[f'{table_key}']}")
+                    print(f"{display_key}: {data[table_key]}")
             print(f"""\n1 <- {page_number}/{math.ceil(len(datas) / page_size)} -> 2\n""")
             choice = input("Enter, type exit to exit: ").strip()
             if choice == "exit":
