@@ -105,4 +105,8 @@ class Manage:
 
 @log_decorator
 def run_query():
-    pass
+    manager = Manage()
+    manager.create_company_table()
+    manager.create_department_table()
+    manager.create_employee_table()
+    return True
