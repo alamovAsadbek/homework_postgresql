@@ -1,5 +1,5 @@
 -- Birinchi database yaratib oldim yani postgres databaseni uzgartirmaslik uchun
-CREATE DATABASE statistics_database;
+-- CREATE DATABASE statistics_database;
 
 -- Yangi table yasadim. Company table
 CREATE TABLE IF NOT EXISTS company
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS company
 );
 
 -- Company tablega malumot qo'shib oldim
-INSERT INTO Company (name)
+INSERT INTO company (name)
 VALUES ('Tech Innovators Inc.'),
        ('Global Financial Services Ltd.'),
        ('Wellness Solutions LLC'),
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS department
 );
 
 -- Department tableni malumot bilan to'ldirib oldim
-INSERT INTO Department (name, company_id)
+INSERT INTO department (name, company_id)
 VALUES ('Human Resources', 1),
        ('Finance', 1),
        ('Engineering', 2),
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS employee
 );
 
 -- Employee tableni malumot bilan to'ldirib oldim
-INSERT INTO Employee (full_name, department_id)
+INSERT INTO employee (full_name, department_id)
 VALUES ('Alice Johnson', 1),
        ('Bob Smith', 2),
        ('Charlie Brown', 3),
@@ -73,8 +73,8 @@ VALUES ('Alice Johnson', 1),
        ('Olivia White', 1);
 
 -- Bunda man har bitta kompaniyda nechta xodim borligini aniqladim
-SELECT c.name as NAME, COUNT(e.ID)
+SELECT c.name as NAME, COUNT(c.ID) as All_EMPLOYEES
 FROM company c
          LEFT JOIN department d ON d.COMPANY_ID = c.ID
-         LEFT JOIN employee e ON e.DEPARTMENT_ID = d.id
+         RIGHT JOIN employee e ON e.DEPARTMENT_ID = d.id
 GROUP BY c.name;
