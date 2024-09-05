@@ -68,4 +68,13 @@ class Manage:
 
     @log_decorator
     def create_employee_table(self):
-        pass
+        query = '''
+        CREATE TABLE IF NOT EXISTS employee (
+        ID BIGSERIAL PRIMARY KEY,
+        FULL_NAME VARCHAR(255) NOT NULL,
+        DEPARTMENT_ID BIGINT REFERENCES department(ID),
+        CREATED_AT TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+        )
+        '''
+        execute_query(query)
+        return True
