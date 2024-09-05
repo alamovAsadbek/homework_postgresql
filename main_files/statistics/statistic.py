@@ -22,3 +22,7 @@ class Statistic:
                                 data=result)
         pagination.page_tab()
         return result
+
+    @log_decorator
+    def number_of_departments(self):
+        pass
