@@ -77,6 +77,7 @@ class Manage:
         )
         '''
         execute_query(query)
+        self.insert_employee_table()
         return True
 
     @log_decorator
