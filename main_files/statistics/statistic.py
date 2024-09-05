@@ -17,4 +17,5 @@ class Statistic:
         GROUP BY c.name;
         '''
         result = execute_query(query)
+        print(result)
         return result

@@ -13,7 +13,8 @@ class Manage:
         )
         '''
         execute_query(query)
-        self.insert_company_table()
+        # kament olishdan maqsad programma ishlagan payt har safar malumot qushaveradi databasega
+        # self.insert_company_table()
         return True
 
     @log_decorator
@@ -45,7 +46,8 @@ class Manage:
         )
         '''
         execute_query(query)
-        self.insert_department_table()
+        # kament olishdan maqsad programma ishlagan payt har safar malumot qushaveradi databasega
+        # self.insert_department_table()
         return True
 
     @log_decorator
@@ -77,7 +79,8 @@ class Manage:
         )
         '''
         execute_query(query)
-        self.insert_employee_table()
+        # kament olishdan maqsad programma ishlagan payt har safar malumot qushaveradi databasega
+        # self.insert_employee_table()
         return True
 
     @log_decorator
