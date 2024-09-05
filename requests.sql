@@ -71,3 +71,10 @@ VALUES ('Alice Johnson', 1),
        ('Mia Harris', 4),
        ('Noah Martin', 5),
        ('Olivia White', 1);
+
+-- Bunda man har bitta kompaniyda nechta xodim borligini aniqladim
+SELECT c.name, COUNT(e.ID)
+FROM COMPANY AS c
+         LEFT JOIN DEPARTMENT AS d ON d.COMPANY_ID = c.ID
+         LEFT JOIN EMPLOYEE AS e ON e.DEPARTMENT_ID = d.id
+GROUP BY c.name;
