@@ -102,6 +102,4 @@ class Manage:
         execute_query(query)
         return True
 
-    @log_decorator
-    def run_query(self):
-        pass
+
