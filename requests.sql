@@ -21,3 +21,13 @@ VALUES ('Tech Innovators Inc.'),
        ('Green Energy Solutions'),
        ('Precision Manufacturing Corp.'),
        ('Creative Media Group');
+
+-- Department table yaratib oldim
+CREATE TABLE IF NOT EXISTS department
+(
+    ID         BIGSERIAL PRIMARY KEY,
+    NAME       VARCHAR(255) NOT NULL,
+    COMPANY_ID BIGINT       NOT NULL REFERENCES company (ID),
+    CREATED_AT TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
