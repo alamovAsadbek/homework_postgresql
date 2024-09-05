@@ -102,3 +102,8 @@ FROM department d
 WHERE e.ID is NULL
 group by c.name, d.name;
 
+-- Bu query har bir kompaniyadagi xodimlarning to'liq ismlari va ularning departamentlari
+SELECT c.name, d.name, e.full_name
+FROM employee e
+INNER JOIN department d on e.DEPARTMENT_ID = d.ID
+INNER JOIN company c on c.ID = d.COMPANY_ID;

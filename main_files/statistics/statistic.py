@@ -67,3 +67,7 @@ class Statistic:
                                 data=result_exc)
         pagination.page_tab()
         return True
+
+    @log_decorator
+    def employee_information(self):
+        pass
