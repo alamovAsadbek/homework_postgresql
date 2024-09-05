@@ -9,7 +9,7 @@ class Manage:
         CREATE TABLE IF NOT EXISTS company (
         ID BIGSERIAL PRIMARY KEY,
         NAME VARCHAR(255) NOT NULL,
-        CREATED_AT TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        CREATED_AT TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         )
         '''
         execute_query(query)
