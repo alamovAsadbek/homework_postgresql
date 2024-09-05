@@ -32,6 +32,7 @@ class Statistic:
         GROUP BY c.name;
         '''
         result_exc = execute_query(query, fetch='all')
-        pagination = Pagination(table_name='users', table_keys=[0, 1], display_keys=[0, 1], data=result_exc)
+        pagination = Pagination(table_name='users', table_keys=[0, 1], display_keys=['Company name', 'Count'],
+                                data=result_exc)
         pagination.page_tab()
         return True
