@@ -91,3 +91,12 @@ FROM department d
     LEFT JOIN employee e on d.ID = e.DEPARTMENT_ID
     LEFT JOIN company c on d.company_id=c.ID
 group by c.name, d.name ORDER BY count(*) desc ;
+
+
+-- Bu query orqali xodimsiz departamentlarni kurish mumkin
+SELECT c.name, d.name, COUNT(*)
+FROM department d
+LEFT JOIN employee e on e.DEPARTMENT_ID IS NULL
+LEFT JOIN company c on d.company_id=c.ID
+group by c.name, d.name;
+
